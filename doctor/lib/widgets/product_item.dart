@@ -1,22 +1,16 @@
 import 'dart:math';
 
+import 'package:doctor/providers/product.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../providers/product.dart';
 
 import '../screens/product_detail_screen.dart';
 
 class ProductItem extends StatelessWidget {
-  final String id;
-  final String title;
-  final String imageUrl;
-  final String spesialis;
-  final String alamat;
-
-  // ignore: use_key_in_widget_constructors
-  const ProductItem(
-      this.id, this.title, this.spesialis, this.alamat, this.imageUrl);
-
   @override
   Widget build(BuildContext context) {
+    final productData = Provider.of<Product>(context);
     return ClipRRect(
       borderRadius: BorderRadius.circular(8),
       child: GridTile(
@@ -24,11 +18,11 @@ class ProductItem extends StatelessWidget {
           onTap: () {
             Navigator.of(context).pushNamed(
               ProductDetailScreen.routeName,
-              arguments: id,
+              arguments: productData.id,
             );
           },
           child: Image.network(
-            imageUrl,
+            productData.imageUrl,
             fit: BoxFit.cover,
           ),
         ),
@@ -42,7 +36,7 @@ class ProductItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    title,
+                    productData.title,
                     textAlign: TextAlign.start,
                     style: const TextStyle(
                         color: Colors.black87,
@@ -51,7 +45,7 @@ class ProductItem extends StatelessWidget {
                     maxLines: 1,
                   ),
                   Text(
-                    spesialis,
+                    productData.spesialis,
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       color: Colors.black87,
@@ -59,7 +53,7 @@ class ProductItem extends StatelessWidget {
                     maxLines: 1,
                   ),
                   Text(
-                    alamat,
+                    productData.alamat,
                     textAlign: TextAlign.start,
                     style: TextStyle(color: Colors.black87),
                     maxLines: 1,
@@ -72,13 +66,21 @@ class ProductItem extends StatelessWidget {
                     child: Row(
                       children: [
                         IconButton(
-                          icon: Icon(
-                            Icons.favorite_border_outlined,
-                            color: Colors.red,
-                            size: 20,
-                          ),
+                          icon: (productData.isFavorite)
+                              ? Icon(
+                                  Icons.favorite,
+                                  color: Colors.red,
+                                  size: 20,
+                                )
+                              : Icon(
+                                  Icons.favorite_border_outlined,
+                                  color: Colors.red,
+                                  size: 20,
+                                ),
                           color: Theme.of(context).colorScheme.secondary,
-                          onPressed: () {},
+                          onPressed: () {
+                            productData.statusFav();
+                          },
                         ),
                         Text(
                           "${10 + Random().nextInt(100).toDouble()} | Pasien (${10 + Random().nextInt(100)})",
