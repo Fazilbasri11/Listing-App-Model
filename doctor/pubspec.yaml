@@ -59,15 +59,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - icons/coronavirus.png
-    - icons/tooth.png
-    - icons/heart.png
-    - icons/neurology.png
-    - icons/eye.png
-    - images/dsatu.jpg
-    - images/ddua.jpg
-    - images/dtiga.jpg
-    - images/ads.jpg
+    - icons/
+    - images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

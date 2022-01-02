@@ -266,6 +266,28 @@ class ProductsOverviewScreen extends StatelessWidget {
                   ),
                 ],
               )),
+          //title obat
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 40, left: 20),
+                child: Text(
+                  "Beli Obat",
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 40, left: 20, right: 20),
+                child: Text(
+                  "View All",
+                  style: TextStyle(fontSize: 12),
+                ),
+              ),
+            ],
+          ),
+          //obat view scrol
+
           //title profile
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -277,13 +299,13 @@ class ProductsOverviewScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 18),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 40, left: 20, right: 20),
-                child: Text(
-                  "View All",
-                  style: TextStyle(fontSize: 12),
-                ),
-              ),
+              // Container(
+              //   margin: EdgeInsets.only(top: 40, left: 20, right: 20),
+              //   child: Text(
+              //     "View All",
+              //     style: TextStyle(fontSize: 12),
+              //   ),
+              // ),
             ],
           ),
           //daftar profile

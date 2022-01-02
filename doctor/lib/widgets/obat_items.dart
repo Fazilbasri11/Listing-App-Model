@@ -7,7 +7,7 @@ import '../providers/product.dart';
 
 import '../screens/product_detail_screen.dart';
 
-class ProductItem extends StatelessWidget {
+class ObatItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final productData = Provider.of<Product>(context, listen: false);
@@ -71,12 +71,12 @@ class ProductItem extends StatelessWidget {
                           builder: (context, productData, child) => IconButton(
                             icon: (productData.isFavorite)
                                 ? Icon(
-                                    Icons.favorite,
+                                    Icons.shopping_cart,
                                     color: Colors.red,
                                     size: 20,
                                   )
                                 : Icon(
-                                    Icons.favorite_border_outlined,
+                                    Icons.shopping_cart_outlined,
                                     color: Colors.red,
                                     size: 20,
                                   ),
