@@ -13,9 +13,6 @@ class Login extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               color: Colors.red,
-              child: Image.asset(
-                "images/flat.png",
-              ),
             ),
             width: 360,
             height: 160,
