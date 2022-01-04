@@ -11,7 +11,7 @@ class iklan extends StatelessWidget {
       "Doktor": "Specialist Neurology",
     },
     {
-      "Nama": "Dr. Al-Lif",
+      "Nama": "Dr. AlLif",
       "Doktor": "Specialist Tooth",
     },
   ];
