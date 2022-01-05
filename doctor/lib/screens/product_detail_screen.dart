@@ -12,55 +12,58 @@ class ProductDetailScreen extends StatelessWidget {
         ModalRoute.of(context)!.settings.arguments as String; // is the id!
     final product = Provider.of<Products>(context).findById(productId);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Profile ${product.title}',
-          style: TextStyle(fontSize: 18),
+    return Hero(
+      tag: 'detail',
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Profile ${product.title}',
+            style: TextStyle(fontSize: 18),
+          ),
         ),
-      ),
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            height: 250,
-            child: Image.network(
-              product.imageUrl,
-              fit: BoxFit.cover,
+        body: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: 250,
+              child: Image.network(
+                product.imageUrl,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            product.title,
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+            const SizedBox(height: 10),
+            Text(
+              product.title,
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            product.spesialis,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
+            const SizedBox(height: 10),
+            Text(
+              product.spesialis,
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            product.alamat,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
+            const SizedBox(height: 10),
+            Text(
+              product.alamat,
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          const SizedBox(height: 15),
-          Text(
-            product.description,
-            style: const TextStyle(
-              fontSize: 14,
+            const SizedBox(height: 15),
+            Text(
+              product.description,
+              style: const TextStyle(
+                fontSize: 14,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
