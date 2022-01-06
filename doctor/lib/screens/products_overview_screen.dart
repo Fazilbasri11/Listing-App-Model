@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:doctor/screens/iklan.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
@@ -12,21 +14,25 @@ class ProductsOverviewScreen extends StatelessWidget {
     return Hero(
       tag: 'detail',
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "Halo!  ${faker.person.prefix()} ${faker.person.firstName()}",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(80),
+          child: AppBar(
+            backgroundColor: Colors.blue[800],
+            title: Text(
+              "Welcome Back \n${faker.person.prefix()} ${faker.person.firstName()}",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            ),
+            actions: [
+              Container(
+                padding: const EdgeInsets.only(
+                  right: 20,
+                ),
+                child: const CircleAvatar(
+                  backgroundImage: AssetImage("images/dsatu.jpg"),
+                ),
+              )
+            ],
           ),
-          actions: [
-            Container(
-              padding: const EdgeInsets.only(
-                right: 20,
-              ),
-              child: const CircleAvatar(
-                backgroundImage: AssetImage("images/dsatu.jpg"),
-              ),
-            )
-          ],
         ),
         body: ListView(
           scrollDirection: Axis.vertical,

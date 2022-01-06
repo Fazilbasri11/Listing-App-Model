@@ -19,8 +19,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Roboto',
-          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.indigo)
-              .copyWith(secondary: Colors.amber),
         ),
         home: ProductsOverviewScreen(),
         // home: Login(),
