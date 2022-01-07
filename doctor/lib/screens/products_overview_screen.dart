@@ -19,7 +19,7 @@ class ProductsOverviewScreen extends StatelessWidget {
           child: AppBar(
             backgroundColor: Colors.blue[800],
             title: Text(
-              "Welcome Back \n${faker.person.prefix()} ${faker.person.firstName()}",
+              "Welcome Bac \n${faker.person.prefix()} ${faker.person.firstName()}",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
             actions: [
