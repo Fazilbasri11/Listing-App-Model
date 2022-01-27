@@ -13,6 +13,13 @@ class ProductsOverviewScreen extends StatefulWidget {
 
 class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   final faker = Faker();
+  late String body;
+
+  @override
+  void initState() {
+    body = "belum ada data";
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
