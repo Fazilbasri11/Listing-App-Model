@@ -5,6 +5,7 @@ import './screens/products_overview_screen.dart';
 import './screens/product_detail_screen.dart';
 import './providers/all_products.dart';
 import './screens/login.dart';
+import './screens/signinpage.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Roboto',
         ),
         //home: ProductsOverviewScreen(),
-        home: Login(),
+        home: SignIn(),
         routes: {
           ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
         },

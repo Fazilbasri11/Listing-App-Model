@@ -10,30 +10,32 @@ class Login extends StatelessWidget {
         children: [
           Container(
             height: 400,
-            margin: EdgeInsets.only(top: 40, right: 10, left: 10),
-            child: Image.asset("images/saly.png"),
+            margin: EdgeInsets.only(top: 0, right: 10, left: 10),
+            child: Image.asset("images/doc.png"),
             decoration: BoxDecoration(
-                color: Color(0xFF7f5af0),
+                /*  color: Color(0xFF7f5af0), */
                 borderRadius: BorderRadius.circular(24)),
           ),
           Container(
-            margin: EdgeInsets.only(top: 40),
+            margin: EdgeInsets.only(top: 25),
             child: Text(
               "Find Your Doctor \n For Mental Healthy.",
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontSize: 25,
-              ),
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontFamily: 'Product'),
             ),
           ),
           Container(
             margin: EdgeInsets.only(top: 20),
             child: Text(
-              "Lorem ipsum, atau ringkasnya lipsum,\nadalah teks standar yang ditempatkan untuk",
+              "Lorem ipsum, atau ringkasnya lipsum,\nadalah teks standar yang \n ditempatkan untuk.",
               textAlign: TextAlign.center,
               style: TextStyle(
+                fontFamily: 'Product',
+                height: 1.5,
                 color: Colors.white,
                 letterSpacing: 2,
               ),
@@ -64,7 +66,7 @@ class Login extends StatelessWidget {
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
-                          padding: const EdgeInsets.only(right: 30, left: 30),
+                          padding: const EdgeInsets.only(right: 40, left: 40),
                           primary: Colors.white,
                           textStyle: const TextStyle(fontSize: 20),
                         ),
@@ -90,9 +92,9 @@ class Login extends StatelessWidget {
                             borderRadius: BorderRadius.all(Radius.circular(14)),
                             gradient: LinearGradient(
                               colors: <Color>[
-                                Color(0xFF242629),
-                                Color(0xFF242629),
-                                Color(0xFF242629),
+                                Color(0xFF303134),
+                                Color(0xFF303134),
+                                Color(0xFF303134),
                               ],
                             ),
                           ),
@@ -102,13 +104,13 @@ class Login extends StatelessWidget {
                         style: TextButton.styleFrom(
                           shape: const RoundedRectangleBorder(
                               borderRadius: BorderRadius.all(Radius.zero)),
-                          padding: const EdgeInsets.only(right: 30, left: 30),
+                          padding: const EdgeInsets.only(right: 40, left: 40),
                           primary: Colors.white,
                           textStyle: const TextStyle(fontSize: 20),
                         ),
                         onPressed: () {},
                         child: const Text(
-                          'Sign in',
+                          'Sign In',
                           style: TextStyle(
                               color: Colors.white70,
                               fontSize: 16,
