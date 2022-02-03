@@ -1,3 +1,5 @@
+import 'package:doctor/screens/products_overview_screen.dart';
+import 'package:doctor/screens/registerpage.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
@@ -12,11 +14,14 @@ class SignIn extends StatelessWidget {
           Row(
             children: [
               Container(
-                padding: EdgeInsets.only(left: 20, top: 40),
-                child: Icon(
-                  Icons.arrow_back,
+                padding: EdgeInsets.only(left: 15, top: 30),
+                child: IconButton(
+                  icon: const Icon(Icons.arrow_back),
                   color: Colors.white,
-                  size: 35,
+                  iconSize: 35,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 ),
               )
             ],
@@ -107,7 +112,7 @@ class SignIn extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 120),
+            margin: EdgeInsets.only(top: 110),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -115,15 +120,25 @@ class SignIn extends StatelessWidget {
                   "Don't Have an account?",
                   style: TextStyle(color: Color(0xFFfffffe), fontSize: 12),
                 ),
-                Text(
-                  " Register",
-                  style: TextStyle(color: Colors.blue, fontSize: 16),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 16),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RegisterPage()),
+                    );
+                  },
+                  child: const Text(
+                    " Register",
+                    style: TextStyle(color: Colors.blue, fontSize: 16),
+                  ),
                 ),
               ],
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 10),
             child: Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(4),
@@ -151,7 +166,11 @@ class SignIn extends StatelessWidget {
                         textStyle: const TextStyle(fontSize: 20),
                       ),
                       onPressed: () {
-                        print("halo");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductsOverviewScreen()),
+                        );
                       },
                       child: const Text(
                         'Sign In',

@@ -1,3 +1,5 @@
+import 'package:doctor/screens/registerpage.dart';
+import 'package:doctor/screens/signinpage.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -70,7 +72,13 @@ class Login extends StatelessWidget {
                           primary: Colors.white,
                           textStyle: const TextStyle(fontSize: 20),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisterPage()),
+                          );
+                        },
                         child: const Text(
                           'Register',
                           style: TextStyle(
@@ -108,7 +116,12 @@ class Login extends StatelessWidget {
                           primary: Colors.white,
                           textStyle: const TextStyle(fontSize: 20),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SignIn()),
+                          );
+                        },
                         child: const Text(
                           'Sign In',
                           style: TextStyle(
