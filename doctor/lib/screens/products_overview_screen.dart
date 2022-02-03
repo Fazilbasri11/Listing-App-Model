@@ -27,7 +27,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
       tag: 'detail',
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80),
+          preferredSize: Size.fromHeight(60),
           child: AppBar(
             backgroundColor: Colors.blue[800],
             title: Text(

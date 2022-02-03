@@ -124,7 +124,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 Container(
                   child: IconButton(
                     icon: const Icon(Icons.check_box_outline_blank),
-                    color: Colors.white,
+                    color: Colors.red,
                     iconSize: 16,
                     onPressed: () {},
                   ),
